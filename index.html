@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AniPulse</title>
+<link rel="stylesheet" href="style.css">
+<link rel="icon" type="image/png" href="icon1.png">
+</head>
+<body>
+
+<header>
+  <h1>🎌 AniPulse</h1>
+  <p>Search anime → see seasons & episodes</p>
+  
+  <div style="margin-top:12px; display:flex; justify-content:center; gap:8px;">
+    <input id="search" placeholder="Type anime name..." />
+    <button id="search-btn">🔍</button>
+  </div>
+
+  <!-- small ? guide button -->
+  <button id="guide-btn">?</button>
+</header>
+
+<div class="apk-download">
+  <a href="AniPulse.apk" download>
+    📲 Download AniPulse App (APK)
+  </a>
+</div>
+
+
+
+<main id="anime-container"></main>
+
+<!-- Anime Details Modal -->
+<div id="modal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <div id="modal-body"></div>
+  </div>
+</div>
+
+<!-- Guide Modal -->
+<div id="guide-modal" class="modal">
+  <div class="modal-content">
+    <span class="close-guide">&times;</span>
+    <h2>How to Use AniPulse</h2>
+  <p>
+  1. Type an anime name in the search box.<br>
+  2. Press <b>Enter</b> or click the <b>Search</b> button.<br>
+  3. Matching anime seasons will appear below.<br>
+  4. Click any anime card to view seasons, episodes, and status.<br>
+  5. Enjoy using AniPulse 🚀
+</p>
+
+  </div>
+</div>
+
+<footer>
+  Built By <a href="https://www.instagram.com/ablbytes/" target="_blank">A.A.A</a>😎
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
