@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AniPulse</title>
-<link rel="stylesheet" href="style.css">
-<link rel="icon" type="image/png" href="icon1.png">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AniPulse</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" href="icon1.png">
 </head>
 <body>
 
@@ -28,8 +28,6 @@
   </a>
 </div>
 
-
-
 <main id="anime-container"></main>
 
 <!-- Anime Details Modal -->
@@ -45,14 +43,13 @@
   <div class="modal-content">
     <span class="close-guide">&times;</span>
     <h2>How to Use AniPulse</h2>
-  <p>
-  1. Type an anime name in the search box.<br>
-  2. Press <b>Enter</b> or click the <b>Search</b> button.<br>
-  3. Matching anime seasons will appear below.<br>
-  4. Click any anime card to view seasons, episodes, and status.<br>
-  5. Enjoy using AniPulse 🚀
-</p>
-
+    <p>
+      1. Type an anime name in the search box.<br>
+      2. Press <b>Enter</b> or click the <b>Search</b> button.<br>
+      3. Matching anime seasons will appear below.<br>
+      4. Click any anime card to view seasons, episodes, and status.<br>
+      5. Enjoy using AniPulse 🚀
+    </p>
   </div>
 </div>
 
@@ -60,6 +57,35 @@
   Built By <a href="https://www.instagram.com/ablbytes/" target="_blank">A.A.A</a>😎
 </footer>
 
+<!-- Your JS logic -->
 <script src="script.js"></script>
+
+<!-- CHATBASE WIDGET (your exact snippet) -->
+<script>
+(function(){
+  if(!window.chatbase || window.chatbase("getState") !== "initialized"){
+    window.chatbase = (...arguments) => {
+      if(!window.chatbase.q){ window.chatbase.q = [] }
+      window.chatbase.q.push(arguments)
+    };
+    window.chatbase = new Proxy(window.chatbase, {
+      get(target, prop){
+        if(prop === "q"){ return target.q }
+        return (...args) => target(prop, ...args)
+      }
+    })
+  }
+  const onLoad = function(){
+    const script = document.createElement("script");
+    script.src = "https://www.chatbase.co/embed.min.js";
+    script.id = "Mc4_fvVEgmJTehPBDrSTn";  // your chatbot id
+    script.domain = "www.chatbase.co";
+    document.body.appendChild(script)
+  };
+  if(document.readyState === "complete"){ onLoad() }
+  else { window.addEventListener("load", onLoad) }
+})();
+</script>
+
 </body>
 </html>
